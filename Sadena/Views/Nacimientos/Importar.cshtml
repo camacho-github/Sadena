@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Nacimientos";
+}
+
+<!-- Page content -->
+<div class="page-content">
+
+    <!-- Content -->
+    <div class="container-fluid">
+        <form class="form-horizontal" action="">
+            <fieldset style="padding:20px 20px 0px 20px;">
+                <legend>Selección de Archivos</legend>
+                <div class="form-group">
+                    <label>SINAC</label>
+                    <input type="file" name="sinacFile" class="form-control-file" placeholder="Archivo...">
+                </div>
+                <div class="form-group">
+                    <label>SIC</label>
+                    <input type="file" name="sicFile" class="form-control-file" placeholder="Archivo...">
+                </div>
+                <div class="form-group">
+                    <label>Catálogos</label>
+                    <input type="file" name="catFile" class="form-control-file" placeholder="Archivo...">
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="btn-group">
+                        <button id="loadBtn" type="button" class="btn btn-success">Cargar Información</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!-- ./content -->
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Mensaje</h4>
+                </div>
+                <div class="modal-body">
+                    <p>La información ha sido cargada éxitosamente.</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="/Nacimientos/Comparar">
+                        <button type="submit" class="btn btn-success" data-dismiss="modal">Continuar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./modal -->
+
+</div>
+<!-- ./page content -->

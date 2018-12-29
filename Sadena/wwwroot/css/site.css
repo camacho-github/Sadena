@@ -1,37 +1,77 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+   for details on configuring this project to bundle and minify static web assets. */
+
+/* Table */
+table thead tr th {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+table tbody tr td {
+    font-size: 11px;
 }
 
-/* Carousel */
-.carousel-caption p {
+.main-footer {
+    padding-bottom: 40px;
+}
+
+/* Site classes */
+p.note-feet {
+    font-size: 11px;
+}
+
+.img-logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-content {
+    margin-top: 5%;
+}
+
+.panel-title {
     font-size: 20px;
-    line-height: 1.4;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.description-block {
+    text-align:center;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.badge-primary {
+    background-color: #d9230f;
 }
+
+.badge-success {
+    background-color: #469408;
+}
+
+.badge-warning {
+    background-color: #9b479f;
+}
+
+.fa-danger {
+    color: #d9831f;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #444444;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type='file'] {
+    height: 30px;
+    width:100%;
+}
+
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
 }

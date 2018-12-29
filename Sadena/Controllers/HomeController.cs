@@ -17,14 +17,14 @@ namespace Sadena.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "SADENA";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Para información acerca de esta herramienta.";
 
             return View();
         }
@@ -33,6 +33,17 @@ namespace Sadena.Controllers
         {
             return View();
         }
+
+        public IActionResult Exit()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

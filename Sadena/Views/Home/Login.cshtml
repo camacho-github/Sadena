@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Inicio de Sesión";
+}
+
+<!-- Page content -->
+<div class="page-content">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="container">
+        <form class="form-horizontal" action="/Nacimientos/Comparar">
+            <fieldset>
+                <legend>Credenciales</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <!--<div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Recordarme
+                            </label>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <a style="color:white;" class="btn btn-default" asp-area="" asp-controller="Home" asp-action="Index">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Go!</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>
+<!-- ./page content -->
