@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.ComponentModel;
+using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 namespace Sadena.Models.Entidades
@@ -21,6 +22,9 @@ namespace Sadena.Models.Entidades
         [DataMember(Name = "CorreoE", IsRequired = true)]
         [XmlAttribute("CorreoE")]
         public string CorreoE { get; set; }
+
+        [DisplayName("Contraseña")]
+        public string Contrasenia { get; set; }
 
         [DataMember(Name = "RolId", IsRequired = true)]
         [XmlAttribute("RolId")]

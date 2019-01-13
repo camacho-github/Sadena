@@ -8,8 +8,104 @@
     <!-- Content -->
     <div class="container-fluid">
 
+        <!-- Search -->
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="well bs-component">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <legend>Opciones de búsqueda</legend>
+                                <div class="form-group">
+                                    <label>Mes inicial</label>
+                                    <select class="form-control">
+                                        <option selected="selected">Todos</option>
+                                        <option>Enero</option>
+                                        <option>Febrero</option>
+                                        <option>Marzo</option>
+                                        <option>Abril</option>
+                                        <option>Mayo</option>
+                                        <option>Junio</option>
+                                        <option>Julio</option>
+                                        <option>Agosto</option>
+                                        <option>Septiembre</option>
+                                        <option>Octubre</option>
+                                        <option>Noviembre</option>
+                                        <option>Diciembre</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Mes final</label>
+                                    <select class="form-control">
+                                        <option selected="selected">Todos</option>
+                                        <option>Enero</option>
+                                        <option>Febrero</option>
+                                        <option>Marzo</option>
+                                        <option>Abril</option>
+                                        <option>Mayo</option>
+                                        <option>Junio</option>
+                                        <option>Julio</option>
+                                        <option>Agosto</option>
+                                        <option>Septiembre</option>
+                                        <option>Octubre</option>
+                                        <option>Noviembre</option>
+                                        <option>Diciembre</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Año</label>
+                                    <select class="form-control">
+                                        <option selected="selected">Todos</option>
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option>2019</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Municipios</label>
+                                    <select class="form-control select2" multiple>
+                                        <option value="001">Abasolo</option>
+                                        <option value="002">Acuña</option>
+                                        <option value="003">Allende</option>
+                                        <option value="004">Arteaga</option>
+                                        <option value="005">Candela</option>
+                                        <option value="006">Castaños</option>
+                                        <option value="007">Cuatro Ciénegas</option>
+                                        <option value="008">Escobedo</option>
+                                        <option value="009">Francisco I. Madero</option>
+                                        <option value="010">Frontera</option>
+                                        <option value="011">General Cepeda</option>
+                                        <option value="012">Guerrero</option>
+                                        <option value="013">Hidalgo</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <br />
+                                <div class="form-group" style="padding-bottom:10px;">
+                                    <div class="btn-group">
+                                        <button id="searchBtn" type="button" class="btn btn-success">Buscar <i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <p class="note-feet"><strong>* Seleccione el periodo y los municipios: (Si se dejan en blanco, se realizará el cálculo general "todos los registros de la base de datos").</strong></p>
+                                    </div>
+                                </div>
+                                <!-- /.form-group -->
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./search -->
+
         <!-- Result -->
-        <section id="searchingResult">
+        <section id="searchingResult" style="display:none;">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="panel panel-default">
@@ -89,7 +185,7 @@
                                             <table id="unregisteredTable" class="table table-striped table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th style="border-top: 2px solid #dddddd;">FOLIO</th>
+                                                        <th>FOLIO</th>
                                                         <th colspan="3" style="border-top: 2px solid #dddddd;">DATOS DE LA MADRE</th>
                                                         <th colspan="9" style="border-top: 2px solid #dddddd;">DATOS DE LA RESIDENCIA DE LA MADRE</th>
                                                         <th colspan="4" style="border-top: 2px solid #dddddd;">DATOS SOCIOECONÓMICOS DE LA MADRE</th>

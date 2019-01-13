@@ -1,23 +1,47 @@
-﻿@{
+﻿<!-- Scope -->
+@{
     ViewData["Title"] = "Contacto";
+    ViewData["Message"] = "Para información acerca de esta herramienta";
 }
 
 <!-- Page content -->
 <div class="page-content">
-    <h2>@ViewData["Title"]</h2>
-    <h3>@ViewData["Message"]</h3>
-    <address>
-        Periférico Luis Echeverría Álvarez 1250<br />
-        Colonia Lourdes, CP 25090<br />
-        Saltillo, Coahuila<br />
-        <abbr title="Teléfonos">Tel(s):</abbr>
-        01 (844) 414 87 98<br />
-        01 (844) 414 85 46<br />
-        www.registrocivilcoahuila.gob.mx<br />
-    </address>
-    <address>
-        <strong>Soporte:</strong> <a href="mailto:support@example.com">support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:marketing@example.com">marketing@example.com</a>
-    </address>
+
+    <!-- Content -->
+    <div class="container-fluid">
+
+        <!-- Contact -->
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>@ViewData["Title"]</h2>
+                    <!-- Panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="text-info">@ViewData["Message"]</h3>
+                            <address>
+                                Periférico Luis Echeverría Álvarez 1250<br />
+                                Colonia Lourdes, CP 25090<br />
+                                Saltillo, Coahuila<br />
+                                <abbr title="Teléfonos">Tel(s):</abbr>
+                                01 (844) 414 87 98<br />
+                                01 (844) 414 85 46<br />
+                                www.registrocivilcoahuila.gob.mx<br />
+                            </address>
+                            <address>
+                                <strong>Soporte:</strong> <a href="mailto:support@example.com">support@example.com</a><br />
+                                <strong>Marketing:</strong> <a href="mailto:marketing@example.com">marketing@example.com</a>
+                            </address>
+                        </div>
+                    </div>
+                    <!-- ./panel -->
+                </div>
+            </div>
+        </section>
+        <!-- ./contact -->
+
+    </div>
+    <!-- ./content -->
+
 </div>
 <!-- ./page content -->

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<!-- Imports -->
+@model Sadena.Models.Usuario.Usuario
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -47,34 +50,63 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <!-- Brand -->
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sadena</a>
             </div>
             <!-- Menu-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Nacimientos <span class="caret"></span></a>
+                    <li class="dropdown" style="display:block;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span>Nacimientos <span class="caret"></span></span>
+                        </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a asp-area="" asp-controller="Nacimientos" asp-action="Importar">Importar archivos</a></li>
-                            <li><a asp-area="" asp-controller="Nacimientos" asp-action="Comparar">Comparación</a></li>
+                            <li style="display:block;">
+                                <a asp-area="" asp-controller="Nacimientos" asp-action="Importar">Importar archivos</a>
+                            </li>
                             <li><a asp-area="" asp-controller="Nacimientos" asp-action="Consultar">Consultar</a></li>
+                            <li class="divider"></li>
+                            <li><a asp-area="" asp-controller="Nacimientos" asp-action="Reportes">Reportes</a></li>
                         </ul>
                     </li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Acerca de</a></li>
                 </ul>
+                <!-- Right menu -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Exit"><i class="fa fa-sign-out"></i> Salir</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Acerca de</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
+                    <li class="dropdown" style="display:block;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span><i class="fa fa-user-circle-o"></i></span>
+                        </a>
+                        <!-- User's menu -->
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <!-- Session's info -->
+                                <div class="col-sm-12">
+                                    <h5><strong>@Html.DisplayFor(model => model.Rol.Nombre)</strong>
+                                        <br /><small>@Html.DisplayFor(model => model.Correo)</small>
+                                    </h5>
+                                </div>
+                            </li>
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Exit">
+                                    <span><i class="fa fa-sign-out mr-3"></i>Salir</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- ./navegation -->
 
-    <!-- Content -->
-    <div class="container">
+    <!-- Main container -->
+    <div class="container-fluid">
         @RenderBody()
+
         <hr />
+        <!-- Footer -->
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
                 <b>Versión</b> 1.0.0
@@ -82,7 +114,9 @@
             <!-- Default -->
             <strong>Copyright &copy; 2018 - <a asp-area="" asp-controller="Home" asp-action="Index">Sadena</a>.</strong> Todos los derechos reservados.
         </footer>
+
     </div>
+    <!-- ./main container -->
 
     <partial name="_CookieConsentPartial" />
 
@@ -127,10 +161,6 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
 
     </environment>
-
-    <!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
 
     @RenderSection("Scripts", required: false)
 

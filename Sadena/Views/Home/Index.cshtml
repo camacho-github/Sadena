@@ -6,44 +6,46 @@
 <div class="page-content">
 
     <!-- Content -->
-    <div class="container-fluid">
+    <div class="container">
+
         <!--Main -->
-        <section>
+        <section class="first-content">
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="/Home/Login">
+                    <form asp-fragment="Usuarios"  asp-controller="Usuarios" asp-action="Login">
                         <!-- Welcome information -->
                         <div class="jumbotron">
                             <h1>SADENA</h1>
-                            <p>Programa para realizar la comparación de nacimientos con los ya registrados, identificando los registrados, subregistrados y los no registrados.</p>
+                            <p>Sistema Analizador de Nacimientos</p>
                             <p><button type="submit" class="btn btn-primary">Ingresar</button></p>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
+
         <!-- Partners -->
         <section>
             <!-- Logos -->
-            <div class="row" style="margin-left:5%;">
+            <div class="row" style="padding-left:5%;">
                 <div class="col-sm-3">
-                    <div class="image-container">
-                        <img class="img-logo" alt="Logo del Gobierno de Coahuila de Zaragoza" src="~/images/cohauila-gob-logo.png">
+                    <div class="image-block-container">
+                        <img alt="Logo del Gobierno de Coahuila de Zaragoza" src="~/images/cohauila-gob-logo.png">
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="image-container">
-                        <img class="img-logo" alt="Logo del BID" src="~/images/bid-logo.png">
+                    <div class="image-block-container">
+                        <img alt="Logo del BID" src="~/images/bid-logo.png">
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="image-container">
-                        <img class="img-logo" alt="Logo del Gobierno de Canada" src="~/images/canada-logo.png">
+                    <div class="image-block-container">
+                        <img alt="Logo del Gobierno de Canada" src="~/images/canada-logo.png">
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="image-container">
-                        <img class="img-logo" alt="Logo del Registro Civil de la Secretaría de Gobernación" src="~/images/regcivil-gob-logo.png">
+                    <div class="image-block-container">
+                        <img alt="Logo del Registro Civil de la Secretaría de Gobernación" src="~/images/regcivil-gob-logo.png">
                     </div>
                 </div>
             </div>

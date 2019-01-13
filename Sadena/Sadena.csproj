@@ -7,28 +7,23 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Views\Home\Login.cshtml">
+    <Content Update="Views\Nacimientos\Consultas\Consultar.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Home\Exit.cshtml">
+    <Content Update="Views\Usuarios\Acceso\Login.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Nacimientos\Importar.cshtml">
+    <Content Update="Views\Usuarios\Acceso\Logout.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Nacimientos\Consultar.cshtml">
+    <Content Update="Views\Nacimientos\Reportes\Reportes.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Nacimientos\Comparar.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\Nacimientos\Comparacion2.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
-    <Content Update="Views\Home\IndexTemplate.cshtml">
+    <Content Update="Views\Nacimientos\Archivos\Importar.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Views\Home\Index.cshtml">
@@ -37,9 +32,19 @@
     <Content Update="Views\Shared\_Layout.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Shared\_LayoutTemplate.cshtml">
-      <Pack>$(IncludeRazorContentInPack)</Pack>
-    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Business\Catalogos\Geografia\" />
+    <Folder Include="Commons\" />
+    <Folder Include="Business\Nacimientos\Consultas\" />
+    <Folder Include="Business\Nacimientos\Archivos\" />
+    <Folder Include="Business\Nacimientos\Reportes\" />
+    <Folder Include="Business\Usuarios\" />
+    <Folder Include="Daos\" />
+    <Folder Include="Models\Nacimientos\Consultas\" />
+    <Folder Include="Persistencia\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

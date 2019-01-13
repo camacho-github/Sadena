@@ -1,5 +1,3 @@
-using System;
-
 namespace Sadena.Models
 {
     public class ErrorViewModel
@@ -7,5 +5,6 @@ namespace Sadena.Models
         public string RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
     }
 }

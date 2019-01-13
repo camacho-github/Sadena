@@ -2,7 +2,7 @@
    for details on configuring this project to bundle and minify static web assets. */
 
 /* Table */
-table thead tr th {
+table thead tr th{
     font-size: 12px;
     font-weight: bold;
     text-align: center;
@@ -18,18 +18,35 @@ table tbody tr td {
     padding-bottom: 40px;
 }
 
+.dataTables_scrollBody, .dataTables_scrollHead {
+    border: 1px solid #dddddd;
+}
+
+.navbar-default {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .4);
+}
+
 /* Site classes */
 p.note-feet {
     font-size: 11px;
 }
 
-.img-logo {
-    margin-left: auto;
-    margin-right: auto;
+.image-block-container {
+    height: 100px;
+    position: relative;
+    text-align:center;
+}
+
+.image-block-container img {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width:100%;
 }
 
 .page-content {
-    margin-top: 5%;
+    margin-top: 50px;
 }
 
 .panel-title {
@@ -37,7 +54,7 @@ p.note-feet {
 }
 
 .description-block {
-    text-align:center;
+    text-align: center;
 }
 
 .badge-primary {
@@ -52,26 +69,86 @@ p.note-feet {
     background-color: #9b479f;
 }
 
+.panel-default .panel-heading {
+    color: #ffffff;
+    background-color: #474949;
+}
+
 .fa-danger {
     color: #d9831f;
 }
 
-a:link, a:visited, a:active {
-    text-decoration: none;
-    color: #444444;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 input[type='file'] {
     height: 30px;
-    width:100%;
+    width: 100%;
+}
+
+fieldset {
+    padding: 20px 20px 0px 20px;
+}
+
+.login-panel-container {
+    padding: 10% 20% 30% 20%;
+}
+
+.simple-icon:hover {
+    cursor: default;
+}
+
+.mr-3 {
+    margin-right: 3px;
+}
+
+.jumbotron {
+    border: 1px solid #eeeeee;
+}
+
+@media screen and (max-height: 800px) {
+
+    .login-panel-container {
+        padding: 10% 20% 20% 20%;
+    }
+
+}
+
+/* Hide/rearrange for smaller screens, On screens that are 1024px or less */
+@media screen and (max-width: 1024px) {
+    /* Hide captions */
+    .image-block-container {
+        flex: 80%;
+        max-width: 80%;
+    }
 }
 
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
     /* Hide captions */
+
+    .image-block-container {
+        flex: 50%;
+        max-width: 50%;
+        text-align: center;
+    }
+
+    .image-block-container img {
+        width: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 680px) {
+    /* Hide captions */
+
+    .image-block-container {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .image-block-container img {
+        width: auto;
+    }
+
+
 }
