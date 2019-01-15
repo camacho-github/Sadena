@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace Sadena.Models.Entidades
+namespace Sadena.Models.Usuarios
 {
     [DataContract]
     public class Usuario
@@ -19,11 +19,13 @@ namespace Sadena.Models.Entidades
         [XmlAttribute("UsuarioDesc")]
         public string UsuarioDesc { get; set; }
 
+        [DisplayName("Correo")]
         [DataMember(Name = "CorreoE", IsRequired = true)]
         [XmlAttribute("CorreoE")]
         public string CorreoE { get; set; }
 
         [DisplayName("Contraseña")]
+        [DataMember(Name = "Contrasenia", IsRequired = true)]
         public string Contrasenia { get; set; }
 
         [DataMember(Name = "RolId", IsRequired = true)]

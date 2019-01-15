@@ -7,17 +7,13 @@ namespace Sadena.Controllers
 
     public class HomeController : Controller
     {
+
         public IActionResult About()
         {
             return View();
         }
 
         public IActionResult Contact()
-        {
-            return View();
-        }
-
-        public IActionResult Exit()
         {
             return View();
         }
@@ -37,5 +33,6 @@ namespace Sadena.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

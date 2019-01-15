@@ -1,38 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Sadena.Models.Usuarios;
 
 namespace Sadena.Controllers.Usuarios
 {
     public class AccesoController : Controller
     {
-        // GET: Usuarios
-        public ActionResult Index()
+        // GET: Acceso
+        public ActionResult Ingresar()
         {
-            return View();
+            return View("Views/Usuarios/Acceso/Ingresar.cshtml");
         }
 
-        // GET: Usuarios/Details/5
+        // GET: Acceso
+        public ActionResult Salir()
+        {
+            return View("Views/Usuarios/Acceso/Salir.cshtml");
+        }
+
+        // POST: Acceso/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login([Bind("CorreoE, Contrasenia")] Usuario usuario)
+        {
+
+            return View("Views/Nacimientos/Consultas/Consultar.cshtml");
+        }
+
+        // GET: Acceso/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        // GET: Usuarios/Create
+        // GET: Acceso/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuarios/Create
+        // POST: Acceso/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -41,7 +48,7 @@ namespace Sadena.Controllers.Usuarios
             {
                 // TODO: Add insert logic here
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Ingresar));
             }
             catch
             {
@@ -49,13 +56,13 @@ namespace Sadena.Controllers.Usuarios
             }
         }
 
-        // GET: Usuarios/Edit/5
+        // GET: Acceso/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Usuarios/Edit/5
+        // POST: Acceso/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -64,7 +71,7 @@ namespace Sadena.Controllers.Usuarios
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Ingresar));
             }
             catch
             {
@@ -72,13 +79,13 @@ namespace Sadena.Controllers.Usuarios
             }
         }
 
-        // GET: Usuarios/Delete/5
+        // GET: Acceso/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Usuarios/Delete/5
+        // POST: Acceso/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
@@ -87,7 +94,7 @@ namespace Sadena.Controllers.Usuarios
             {
                 // TODO: Add delete logic here
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Ingresar));
             }
             catch
             {

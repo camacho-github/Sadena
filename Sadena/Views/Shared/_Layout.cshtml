@@ -1,12 +1,17 @@
 ﻿<!-- Imports -->
-@model Sadena.Models.Usuario.Usuario
-
+@model Sadena.Models.Usuarios.Usuario
+<!-- Scope -->
+@{
+    ViewData["Root"] = "Sadena";
+    ViewData["Version"] = "1.0.0";
+    ViewData["Year"] = "2018";
+}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Sadena</title>
+    <title>@ViewData["Title"] - @ViewData["Root"]</title>
 
     <!-- Styles -->
     <environment include="Development">
@@ -51,7 +56,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- Brand -->
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sadena</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@ViewData["Root"]</a>
             </div>
             <!-- Menu-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -62,11 +67,11 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li style="display:block;">
-                                <a asp-area="" asp-controller="Nacimientos" asp-action="Importar">Importar archivos</a>
+                                <a asp-area="" asp-fragment="Nacimientos" asp-controller="Archivos" asp-action="Importar">Importar archivos</a>
                             </li>
-                            <li><a asp-area="" asp-controller="Nacimientos" asp-action="Consultar">Consultar</a></li>
+                            <li><a asp-area="" asp-fragment="Nacimientos" asp-controller="Consultas" asp-action="Consultar">Consultar</a></li>
                             <li class="divider"></li>
-                            <li><a asp-area="" asp-controller="Nacimientos" asp-action="Reportes">Reportes</a></li>
+                            <li><a asp-area="" asp-fragment="Nacimientos" asp-controller="Reportes" asp-action="Reportes">Reportes</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -83,13 +88,14 @@
                             <li>
                                 <!-- Session's info -->
                                 <div class="col-sm-12">
-                                    <h5><strong>@Html.DisplayFor(model => model.Rol.Nombre)</strong>
-                                        <br /><small>@Html.DisplayFor(model => model.Correo)</small>
+                                    <h5>
+                                        <strong>@Html.DisplayFor(model => model.Rol.RolDesc)</strong>
+                                        <br /><small>@Html.DisplayFor(model => model.CorreoE)</small>
                                     </h5>
                                 </div>
                             </li>
                             <li>
-                                <a asp-area="" asp-controller="Home" asp-action="Exit">
+                                <a asp-area="" asp-fragment="Usuarios" asp-controller="Acceso" asp-action="Salir">
                                     <span><i class="fa fa-sign-out mr-3"></i>Salir</span>
                                 </a>
                             </li>
@@ -100,20 +106,26 @@
         </div>
     </nav>
     <!-- ./navegation -->
-
     <!-- Main container -->
     <div class="container-fluid">
         @RenderBody()
 
-        <hr />
         <!-- Footer -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Versión</b> 1.0.0
-            </div>
-            <!-- Default -->
-            <strong>Copyright &copy; 2018 - <a asp-area="" asp-controller="Home" asp-action="Index">Sadena</a>.</strong> Todos los derechos reservados.
-        </footer>
+        <div class="footer-container">
+            <hr />
+            <footer>
+                <!-- Version -->
+                <div class="pull-right hidden-xs">
+                    <b>Versión</b> @ViewData["Version"]
+                </div>
+                <!-- Default -->
+                <strong>
+                    Copyright &copy; @ViewData["Year"] -
+                    <a asp-area="" asp-controller="Home" asp-action="Index">@ViewData["Root"]</a>.
+                </strong> Todos los derechos reservados.
+            </footer>
+        </div>
+        <!-- ./footer -->
 
     </div>
     <!-- ./main container -->

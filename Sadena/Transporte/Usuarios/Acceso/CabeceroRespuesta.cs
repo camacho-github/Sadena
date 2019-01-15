@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace Sadena.Models.Contratos
+namespace Sadena.Transporte.Usuarios.Acceso
 {
     [DataContract]
     public class CabeceroRespuesta

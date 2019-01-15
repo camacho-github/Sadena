@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-using System.Xml.Serialization;
-
+﻿
 namespace Sadena.Models.Constantes
 {
     

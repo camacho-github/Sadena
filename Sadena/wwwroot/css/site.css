@@ -14,10 +14,6 @@ table tbody tr td {
     font-size: 11px;
 }
 
-.main-footer {
-    padding-bottom: 40px;
-}
-
 .dataTables_scrollBody, .dataTables_scrollHead {
     border: 1px solid #dddddd;
 }
@@ -32,21 +28,26 @@ p.note-feet {
 }
 
 .image-block-container {
-    height: 100px;
-    position: relative;
-    text-align:center;
+    padding-left: 5%;
 }
 
-.image-block-container img {
+.image-container {
+    height: 100px;
+    position: relative;
+    text-align: center;
+}
+
+.image-container img {
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width:100%;
+    width: 100%;
 }
 
 .page-content {
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-bottom: 100px;
 }
 
 .panel-title {
@@ -87,6 +88,10 @@ fieldset {
     padding: 20px 20px 0px 20px;
 }
 
+.full-width {
+    width: 100%;
+}
+
 .login-panel-container {
     padding: 10% 20% 30% 20%;
 }
@@ -99,8 +104,48 @@ fieldset {
     margin-right: 3px;
 }
 
+.mt-30 {
+    margin-top: 30px;
+}
+
 .jumbotron {
-    border: 1px solid #eeeeee;
+    border: 1px solid #dddddd;
+}
+
+.address-container span {
+    vertical-align: top;
+}
+
+.address-container address {
+    display: inline-block;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer-container {
+    padding-bottom: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    right: 15px;
+}
+
+.footer-container footer {
+    position: relative;
 }
 
 @media screen and (max-height: 800px) {

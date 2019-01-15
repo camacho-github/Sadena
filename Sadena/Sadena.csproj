@@ -14,10 +14,10 @@
     <Content Update="Views\Nacimientos\Consultas\Consultar.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Usuarios\Acceso\Login.cshtml">
+    <Content Update="Views\Usuarios\Acceso\Ingresar.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Usuarios\Acceso\Logout.cshtml">
+    <Content Update="Views\Usuarios\Acceso\Salir.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Views\Nacimientos\Reportes\Reportes.cshtml">

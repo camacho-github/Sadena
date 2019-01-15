@@ -2,39 +2,36 @@
 @{
     ViewData["Title"] = "Acerca de";
     ViewData["ApplicationName"] = "SADENA";
+    ViewData["ApplicationDescription"] = "Sistema Analizador de Nacimientos";
 }
 
-<!-- Content -->
-<div class="container-fluid page-content">
+<!-- Page content -->
+<div class="page-content">
 
-    <!-- Breadcrumb -->
-    <section class="pull-right">
-        <ul class="breadcrumb">
-            <li><a href="#"><i class="fa fa-home mr-3"></i>Sadena</a></li>
-            <li><a href="#">Nacimientos</a></li>
-            <li class="active">@ViewData["Title"]</li>
-        </ul>
-    </section>
-    <!-- ./breadcrumb -->
-    <!-- Info -->
-    <section>
-        <div class="row">
-            <div class="col-sm-12">
-                <!-- <h2>ViewData["Title"]</h2> -->
-                <!-- Panel -->
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h3 class="text-primary">@ViewData["ApplicationName"]</h3>
-                        <p><b>Sistema Analizador de Nacimientos</b></p>
-                        <p>Programa para realizar la comparación de nacimientos con los ya registrados, identificando los registrados, subregistrados y los no registrados.</p>
-                        <p><small>Herramienta de Cálculo del Subregistro</small></p>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- About -->
+        <section>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Panel -->
+                    <div class="panel panel-default mt-30">
+                        <div class="panel-body">
+                            <h3 class="text-warning">@ViewData["ApplicationName"]</h3>
+                            <p><b>@ViewData["ApplicationDescription"]</b></p>
+                            <p>Programa para realizar la comparación de nacimientos con los ya registrados, identificando los registrados, subregistrados y los no registrados.</p>
+                            <p><small>Herramienta de Cálculo del Subregistro</small></p>
+                        </div>
                     </div>
+                    <!-- ./panel -->
                 </div>
-                <!-- ./panel -->
             </div>
-        </div>
-    </section>
-    <!-- ./info -->
+        </section>
+        <!-- ./about -->
+
+    </div>
+    <!-- ./container -->
 
 </div>
-<!-- ./content -->
+<!-- /.page content -->

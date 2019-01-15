@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace Sadena.Models.Entidades
+namespace Sadena.Models.Catalogos.Socieconomica
 {
     [DataContract]
     public class Sexo

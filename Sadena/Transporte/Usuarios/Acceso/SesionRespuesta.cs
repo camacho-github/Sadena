@@ -1,8 +1,8 @@
-﻿using Sadena.Models.Entidades;
+﻿using Sadena.Models.Usuarios;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace Sadena.Models.Contratos
+namespace Sadena.Transporte.Usuarios.Acceso
 {
     [DataContract]
     public class SesionRespuesta

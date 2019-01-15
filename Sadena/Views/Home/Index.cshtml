@@ -1,57 +1,60 @@
 ﻿@{
     ViewData["Title"] = "Inicio";
+    ViewData["ApplicationName"] = "SADENA";
+    ViewData["ApplicationDescription"] = "Sistema Analizador de Nacimientos";
 }
 
 <!-- Page content -->
 <div class="page-content">
 
-    <!-- Content -->
+    <!-- Container -->
     <div class="container">
 
-        <!--Main -->
-        <section class="first-content">
+        <!--Intro -->
+        <section>
             <div class="row">
                 <div class="col-sm-12">
-                    <form asp-fragment="Usuarios"  asp-controller="Usuarios" asp-action="Login">
-                        <!-- Welcome information -->
-                        <div class="jumbotron">
-                            <h1>SADENA</h1>
-                            <p>Sistema Analizador de Nacimientos</p>
-                            <p><button type="submit" class="btn btn-primary">Ingresar</button></p>
-                        </div>
-                    </form>
+                    <!-- Welcome information -->
+                    <div class="jumbotron mt-30">
+                        <h1>@ViewData["ApplicationName"]</h1>
+                        <p>@ViewData["ApplicationDescription"]</p>
+                        <form asp-area="" asp-fragment="Usuarios" asp-controller="Acceso" asp-action="Ingresar">
+                            <p><button type="submit" style="width:150px;" class="btn btn-primary">Ingresar</button></p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Partners -->
         <section>
-            <!-- Logos -->
-            <div class="row" style="padding-left:5%;">
-                <div class="col-sm-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Logos -->
                     <div class="image-block-container">
-                        <img alt="Logo del Gobierno de Coahuila de Zaragoza" src="~/images/cohauila-gob-logo.png">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="image-block-container">
-                        <img alt="Logo del BID" src="~/images/bid-logo.png">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="image-block-container">
-                        <img alt="Logo del Gobierno de Canada" src="~/images/canada-logo.png">
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="image-block-container">
-                        <img alt="Logo del Registro Civil de la Secretaría de Gobernación" src="~/images/regcivil-gob-logo.png">
+                        <div class="col-sm-3 image-container">
+                            <img alt="Logo del Gobierno de Coahuila de Zaragoza" src="~/images/cohauila-gob-logo.png"
+                                 title="Gobierno de Coahuila de Zaragoza">
+                        </div>
+                        <div class="col-sm-3 image-container">
+                            <img alt="Logo del BID" src="~/images/bid-logo.png"
+                                 title="Banco Interamericano de Desarrollo">
+                        </div>
+                        <div class="col-sm-3 image-container">
+                            <img alt="Logo del Gobierno de Canada" src="~/images/canada-logo.png"
+                                 title="Gobierno de Canadá">
+                        </div>
+                        <div class="col-sm-3 image-container">
+                            <img alt="Logo del Registro Civil de la Secretaría de Gobernación" src="~/images/regcivil-gob-logo.png"
+                                 title="Dirección del Registro Civil">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </div>
-    <!-- /.content -->
+    <!-- /.container -->
 
 </div>
 <!-- ./page content -->
