@@ -15,6 +15,11 @@ namespace Sadena.Controllers.Nacimientos.Reportes
             return View();
         }
 
+        public ActionResult Reportes()
+        {
+            return View("Views/Nacimientos/Reportes/Reportes.cshtml");
+        }
+
         // GET: Reportes/Details/5
         public ActionResult Details(int id)
         {

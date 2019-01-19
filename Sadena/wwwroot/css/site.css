@@ -19,7 +19,7 @@ table tbody tr td {
 }
 
 .navbar-default {
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .4);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* Site classes */
@@ -42,7 +42,7 @@ p.note-feet {
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 90%;
 }
 
 .page-content {
@@ -58,6 +58,10 @@ p.note-feet {
     text-align: center;
 }
 
+.badge-default {
+    background-color: #474949;
+}
+
 .badge-primary {
     background-color: #d9230f;
 }
@@ -68,6 +72,14 @@ p.note-feet {
 
 .badge-warning {
     background-color: #9b479f;
+}
+
+.badge-danger {
+    background-color: #d9831f;
+}
+
+.badge-info {
+    background-color: #029acf;
 }
 
 .panel-default .panel-heading {
@@ -82,6 +94,7 @@ p.note-feet {
 input[type='file'] {
     height: 30px;
     width: 100%;
+    padding-right: 3px;
 }
 
 fieldset {
@@ -92,8 +105,38 @@ fieldset {
     width: 100%;
 }
 
+.report-period {
+    padding-top: 20px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+.report-header {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+.nav-tabs > li > a {
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.report-table-container {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
 .login-panel-container {
     padding: 10% 20% 30% 20%;
+}
+
+.loading-well {
+    padding-bottom: 50px;
 }
 
 .simple-icon:hover {
@@ -108,6 +151,68 @@ fieldset {
     margin-top: 30px;
 }
 
+.report {
+
+}
+
+.report-options .list-group-item {
+    display: inline-block;
+    cursor: pointer;
+    min-width: 300px;
+    text-align: center;
+}
+
+:first-child.list-group-item {
+    border-radius: 0px;
+}
+
+:last-child.list-group-item {
+    border-radius: 0px;
+}
+
+.report-map {
+    /*position: relative; */
+    overflow: hidden;
+}
+
+.map-container {
+    height: 100%;
+    width: 100%;
+    /* position: absolute; 
+    top: 0px;
+    left: 0px; */
+    background-color: rgb(229, 227, 223);
+}
+
+.customised-card {
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.report-title {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.customised-card-header {
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+.customised-card-body {
+    padding-top: 8px;
+}
+
+.customised-card-subtitle {
+    font-size: 16px;
+}
+
+.customised-card-header-divider {
+    border-bottom: 1px solid #dddddd;
+}
+
 .jumbotron {
     border: 1px solid #dddddd;
 }
@@ -118,6 +223,10 @@ fieldset {
 
 .address-container address {
     display: inline-block;
+}
+
+.right {
+    float: right;
 }
 
 html {

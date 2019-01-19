@@ -12,7 +12,7 @@ namespace Sadena.Controllers.Nacimientos.Archivos
         // GET: Archivos
         public ActionResult Importar()
         {
-            return View();
+            return View("Views/Nacimientos/Archivos/Importar.cshtml");
         }
 
         public ActionResult Index()

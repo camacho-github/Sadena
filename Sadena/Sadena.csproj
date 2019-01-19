@@ -41,10 +41,13 @@
     <Folder Include="Business\Nacimientos\Archivos\" />
     <Folder Include="Business\Nacimientos\Reportes\" />
     <Folder Include="Business\Usuarios\" />
+    <Folder Include="Controllers\Georeferenciacion\" />
     <Folder Include="Daos\" />
     <Folder Include="Models\Nacimientos\Consultas\" />
     <Folder Include="Persistencia\" />
     <Folder Include="Services\" />
+    <Folder Include="wwwroot\js\nacimientos\archivos\" />
+    <Folder Include="wwwroot\js\usuarios\" />
   </ItemGroup>
 
 </Project>
