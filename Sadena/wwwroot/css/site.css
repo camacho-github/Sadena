@@ -42,7 +42,7 @@ p.note-feet {
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 80%;
 }
 
 .page-content {
@@ -105,30 +105,9 @@ fieldset {
     width: 100%;
 }
 
-.report-period {
-    padding-top: 20px;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-}
-
-.report-header {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
-}
-
 .nav-tabs > li > a {
     border-radius: 0px;
-    font-weight: bold;
-}
-
-.report-table-container {
-    padding-top: 10px;
-    padding-bottom: 15px;
-    border-left: 1px solid #dddddd;
-    border-right: 1px solid #dddddd;
+    /* font-weight: bold; */
 }
 
 .login-panel-container {
@@ -155,6 +134,32 @@ fieldset {
 
 }
 
+.report-title {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.report-period {
+    padding-top: 20px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+.report-header {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.report-tables-container {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
 .report-options .list-group-item {
     display: inline-block;
     cursor: pointer;
@@ -171,29 +176,23 @@ fieldset {
 }
 
 .report-map {
-    /*position: relative; */
+    width: 680px;
+    height: 550px;
     overflow: hidden;
 }
 
 .map-container {
-    height: 100%;
-    width: 100%;
+    margin-top: 40px;
     /* position: absolute; 
     top: 0px;
-    left: 0px; */
-    background-color: rgb(229, 227, 223);
+    left: 0px; 
+    background-color: rgb(229, 227, 223); */
 }
 
 .customised-card {
     padding: 20px;
     border-radius: 3px;
     box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.report-title {
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .customised-card-header {
@@ -206,7 +205,7 @@ fieldset {
 }
 
 .customised-card-subtitle {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .customised-card-header-divider {

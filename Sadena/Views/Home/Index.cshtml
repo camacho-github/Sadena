@@ -16,11 +16,15 @@
                 <div class="col-sm-12">
                     <!-- Welcome information -->
                     <div class="jumbotron mt-30">
-                        <h1>@ViewData["ApplicationName"]</h1>
-                        <p>@ViewData["ApplicationDescription"]</p>
-                        <form asp-area="" asp-fragment="Usuarios" asp-controller="Acceso" asp-action="Ingresar">
-                            <p><button type="submit" style="width:150px;" class="btn btn-primary">Ingresar</button></p>
+                        <h1>SADENA</h1>
+                        <p>Sistema Analizador de Nacimientos</p>
+                        <form action="/Acceso/Ingresar#Usuarios" method="post">
+                            <p><button class="btn btn-primary" style="width:150px;" type="submit">Ingresar</button></p>
                         </form>
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4">
+                            <img width="300" style="margin-top:-300px;" title="Coahuila de Zaragoza"  alt="Mapa de Coahuila de Zaragoza" src="/images/coahuila-map.svg">
+                        </div>
                     </div>
                 </div>
             </div>
