@@ -1,57 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Nacimientos";
+﻿<!-- Models -->
+
+<!-- Scope -->
+@{
+    ViewData["Root"] = "Sadena";
+    ViewData["Modulo"] = "Nacimientos";
+    ViewData["Option"] = "Consultas";
+    ViewData["Title"] = ViewData["Modulo"] + " / " + ViewData["Option"];
 }
 
 <!-- Page content -->
 <div class="page-content">
 
     <!-- Content -->
-    <div class="container-fluid">
+    <div class="container">
 
+        <!-- Breadcrumb -->
+        <section class="pull-right">
+            <ul class="breadcrumb">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home mr-3"></i>@ViewData["Root"]</a></li>
+                <li><a href="#">@ViewData["Modulo"]</a></li>
+                <li class="active">@ViewData["Option"]</li>
+            </ul>
+        </section>
+        <!-- ./breadcrumb -->
         <!-- Search -->
         <section>
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="well bs-component">
-                        <form class="form-horizontal">
+                    <div class="well">
+                        <form class="form-horizontal" asp-fragment="Nacimientos" asp-controller="Consultas" asp-action="Consultar" method="post">
                             <fieldset>
                                 <legend>Opciones de búsqueda</legend>
                                 <div class="form-group">
-                                    <label>Mes inicial</label>
-                                    <select class="form-control">
-                                        <option selected="selected">Todos</option>
-                                        <option>Enero</option>
-                                        <option>Febrero</option>
-                                        <option>Marzo</option>
-                                        <option>Abril</option>
-                                        <option>Mayo</option>
-                                        <option>Junio</option>
-                                        <option>Julio</option>
-                                        <option>Agosto</option>
-                                        <option>Septiembre</option>
-                                        <option>Octubre</option>
-                                        <option>Noviembre</option>
-                                        <option>Diciembre</option>
-                                    </select>
-                                </div>
-                                <!-- /.form-group -->
-                                <div class="form-group">
-                                    <label>Mes final</label>
-                                    <select class="form-control">
-                                        <option selected="selected">Todos</option>
-                                        <option>Enero</option>
-                                        <option>Febrero</option>
-                                        <option>Marzo</option>
-                                        <option>Abril</option>
-                                        <option>Mayo</option>
-                                        <option>Junio</option>
-                                        <option>Julio</option>
-                                        <option>Agosto</option>
-                                        <option>Septiembre</option>
-                                        <option>Octubre</option>
-                                        <option>Noviembre</option>
-                                        <option>Diciembre</option>
-                                    </select>
+                                    <label>Mes</label>
+                                    <select class="form-control" asp-for="MesesSeleccionados" asp-items="Model.Meses"></select>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
@@ -103,7 +85,6 @@
             </div>
         </section>
         <!-- ./search -->
-
         <!-- Result -->
         <section id="searchingResult" style="display:none;">
             <div class="row">
@@ -380,7 +361,7 @@
                                     <!-- ./col -->
                                 </div>
                             </div>
-                            
+
                         </div>
                         <!-- ./footer -->
                     </div>

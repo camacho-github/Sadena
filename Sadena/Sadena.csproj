@@ -35,13 +35,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Business\Catalogos\Geografia\" />
+    <Folder Include="Business\Catalogos\Socioeconomica\" />
     <Folder Include="Commons\" />
-    <Folder Include="Business\Nacimientos\Consultas\" />
     <Folder Include="Business\Nacimientos\Archivos\" />
     <Folder Include="Business\Nacimientos\Reportes\" />
     <Folder Include="Business\Usuarios\" />
-    <Folder Include="Controllers\Georeferenciacion\" />
     <Folder Include="Daos\" />
     <Folder Include="Models\Nacimientos\Consultas\" />
     <Folder Include="Persistencia\" />

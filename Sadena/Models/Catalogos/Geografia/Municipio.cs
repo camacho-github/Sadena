@@ -7,6 +7,12 @@ namespace Sadena.Models.Catalogos.Geografia
     [DataContract]
     public class Municipio
     {
+        public Municipio(int mpioId, string mpioDesc)
+        {
+            MpioId = mpioId;
+            MpioDesc = mpioDesc;
+        }
+
         [DataMember(Name = "MpioId", IsRequired = true)]
         [XmlAttribute("MpioId")]
         public int MpioId { get; set; }
