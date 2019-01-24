@@ -42,8 +42,6 @@
     <Folder Include="Business\Usuarios\" />
     <Folder Include="Daos\" />
     <Folder Include="Models\Nacimientos\Consultas\" />
-    <Folder Include="Persistencia\" />
-    <Folder Include="Services\" />
     <Folder Include="wwwroot\css\nacimientos\reportes\" />
     <Folder Include="wwwroot\js\nacimientos\archivos\" />
     <Folder Include="wwwroot\js\usuarios\" />
